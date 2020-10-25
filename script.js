@@ -47,3 +47,16 @@ console.log(removeExtraSpaces())
 //     return input;
 // }
 // console.log(capitalizeWords('test'));
+
+
+
+// convert string to kebab case
+String.prototype.kebabCase = function (str) {
+    return str
+        .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+        .map(x => x.toLowerCase())
+        .join('-');
+
+}
+console.log(str.kebabCase('test another testing something'))
+
