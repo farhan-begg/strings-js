@@ -1,0 +1,19 @@
+{
+  "name": "@farhan-begg/string-scripts",
+  "version": "1.0.0",
+  "description": "string library",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farhan-begg/strings-js.git"
+  },
+  "author": "Farhan Begg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farhan-begg/strings-js/issues"
+  },
+  "homepage": "https://github.com/farhan-begg/strings-js#readme"
+}

@@ -1,4 +1,3 @@
-
 // capitalize first letter only
 String.prototype.capitalize = function () {
     return this.charAt(0).toUpperCase() + this.slice(1)
@@ -14,6 +13,7 @@ String.prototype.allCaps = function (str) {
     return splitStr.join(' ');
 }
 console.log(str.allCaps('test another testing something'))
+
 
 
 // makes first character of each word capital
@@ -38,6 +38,8 @@ function removeExtraSpaces() {
     return orig.join('')
 }
 console.log(removeExtraSpaces())
+
+
 
 // // capitalize every other letter
 // function capitalizeWords(input) {
