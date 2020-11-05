@@ -25,14 +25,15 @@ String.prototype.capitalizeWords = function () {
 };
 console.log('test another testing something'.capitalizeWords());
 
-// remove extra white space
-// String.prototype.removeExtraSpaces = function () {
-//     let orig = '   foo  1 ';
-//     orig = orig.trim().split(' ')
 
-//     return orig.join('')
-// }
-// console.log(removeExtraSpaces())
+// remove extra white space
+function removeExtraSpaces() {
+    let orig = '   foo  1 ';
+    orig = orig.trim().split(' ')
+
+    return orig.join('')
+}
+console.log(removeExtraSpaces())
 
 // // capitalize every other letter
 // function capitalizeWords(input) {
@@ -61,34 +62,21 @@ String.prototype.snakeCase = function (str) {
 };
 console.log(str.snakeCase('test another testing something'));
 
-// convert string to camel case
-String.prototype.snakeCase = function (str) {
-    return str
-        .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-        .map((x) => x.toLowerCase())
-        .join('_');
-};
-console.log(str.snakeCase('test another testing something'));
+
 
 // convert to camel case
-String.prototype.camelCase = function (str) {
-    return str
-        .replace(/\s(.)/g, ($1) => $1.toUpperCase())
-        .replace(/\s/g, '')
-        .replace(/^(.)/, ($1) => $1.toLowerCase());
-};
+// CAMEL CASE
+function camelCase(str) {
+    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
+        return index === 0 ? word.toLowerCase() : word.toUpperCase();
+    }).replace(/\s+/g, '');
+}
 
-console.log(str.camelCase('test another testing something'));
+console.log(camelCase("EquipmentClass name"));
 
-String.prototype.shiftl = function (str) {
-    str = str.slice(1);
 
-    return str;
-};
 
-console.log(str.shiftl('test another testing something'));
-
-//
+//SHIFT
 String.prototype.shiftString = function (str = '', step = 0) {
     const { length } = str;
     const index = step % length;
