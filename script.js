@@ -1,9 +1,11 @@
+
 // capitalize first letter only
 String.prototype.capitalize = function () {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
 const str = 'foo';
 console.log(str.capitalize());
+
 
 // make all character upper case
 String.prototype.allCaps = function () {
@@ -35,14 +37,6 @@ function removeExtraSpaces() {
 }
 console.log(removeExtraSpaces())
 
-// // capitalize every other letter
-// function capitalizeWords(input) {
-//     for (i = 0; i < input.length; i += 2) {
-//         input = input.substr(0, i) + input[i].toUpperCase() + input.substr(i + 1);
-//     }
-//     return input;
-// }
-// console.log(capitalizeWords('test'));
 
 // convert string to kebab case
 String.prototype.kebabCase = function (str) {
@@ -65,7 +59,7 @@ console.log(str.snakeCase('test another testing something'));
 
 
 // convert to camel case
-// CAMEL CASE
+
 function camelCase(str) {
     return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
         return index === 0 ? word.toLowerCase() : word.toUpperCase();
@@ -76,7 +70,7 @@ console.log(camelCase("EquipmentClass name"));
 
 
 
-//SHIFT
+// shifts first letter of word to the back
 String.prototype.shiftString = function (str = '', step = 0) {
     const { length } = str;
     const index = step % length;
@@ -93,3 +87,5 @@ String.prototype.shiftString = function (str = '', step = 0) {
 // Right Shift
 // StackDev
 console.log(str.shiftString('StackDev', 3)); // evStackD
+
+module.exports.capitalize = capitalize
